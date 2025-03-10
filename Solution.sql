@@ -131,6 +131,10 @@ select *
 from layoffs_staging2
 where company = 'Advata';
 
+-- removing row_num column
+alter table layoffs_staging2
+drop column row_num;
+
 delete 
 from layoffs_staging2
 where stage = '';
